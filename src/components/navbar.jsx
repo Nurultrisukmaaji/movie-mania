@@ -15,12 +15,12 @@ export default function navbar() {
                     <li className="nav-item">
                         <Link className={`nav-link ${location.pathname === '/' ? 'active' : ''}`} to="/">Home</Link>
                     </li>
-                    <li className="nav-item">
+                    {/* <li className="nav-item">
                         <Link className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`} to="">About</Link>
                     </li>
                     <li className="nav-item">
                         <Link className={`nav-link ${location.pathname === '/contact' ? 'active' : ''}`} to="">Contact</Link>
-                    </li>
+                    </li> */}
                 </ul>
             </div>
         </div>
