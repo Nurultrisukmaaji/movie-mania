@@ -54,6 +54,7 @@ export default function details(){
         <div className="details-movie">
             <h1 className="title">{movie.title}</h1>
             <p className="date">{movie.release_date}</p>
+            <div className='image-detail-movie'></div>
         </div>
     )
 }
