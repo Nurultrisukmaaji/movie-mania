@@ -89,7 +89,6 @@ export default function details(){
                             </ul>
                         </div>
                         <div className="sinopsis"><b>Sinopsis</b><br /> {movie.overview}</div>
-                       
                     </div>
                 </div>
             </div>
