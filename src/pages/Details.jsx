@@ -53,22 +53,10 @@ export default function details(){
     // background image details
     let imageBackground = movie?.backdrop_path
     ? {
-        backgroundImage: `url(${imgUrl}${movie.backdrop_path})`,
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-        width: '100%',
-        height: '500px',
-        borderRadius: '12px'
+        backgroundImage: `url(${imgUrl}${movie.backdrop_path})`
     }
     :{
-        backgroundImage: `url(${Image})`,
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-        width: '100%',
-        height: '500px',
-        borderRadius: '12px'
+        backgroundImage: `url(${Image})`
     }
 
     if (loading) return <p>Loading...</p>;
@@ -81,6 +69,28 @@ export default function details(){
                 <div className="wrap-title mt-auto">
                     <h1 className="title">{movie.title}</h1>
                     <p className="tagline">{movie.tagline}</p>
+                </div>
+            </div>
+            {/* information */}
+            <div className="row justify-content-center">
+                <div className="col-sm-12 col-md-10">
+                    <div className="wrap-information">
+                        <h2 className="info-title">{movie.title}</h2>
+                        <p className='release'><b>Release:</b> <br /> {movie.release_date}</p>
+                        <div className="genre">
+                            <p><b>Genre:</b></p>
+                            <ul>
+                                {movie.genres.map((genre, index) => (
+                                    <li key={genre.id}>
+                                        {genre.name}
+                                        {index < movie.genres.length - 1 && ', '} 
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                        <div className="sinopsis"><b>Sinopsis</b><br /> {movie.overview}</div>
+                       
+                    </div>
                 </div>
             </div>
         </div>

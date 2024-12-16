@@ -84,6 +84,12 @@ a {
 .details-movie .header-detail {
   padding: 20px;
   margin-top: 30px;
+  width: 100%;
+  height: 500px;
+  border-radius: 12px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .details-movie .header-detail .title {
@@ -94,6 +100,36 @@ a {
 .details-movie .header-detail .tagline {
   color: #fff;
   font-size: 18px;
+}
+
+.details-movie .wrap-information {
+  border-radius: 12px;
+  margin-top: 40px;
+  width: 100%;
+  padding: 20px;
+  background-color: #dbdbdb;
+  border: 1px solid #cac9c9;
+}
+
+.details-movie .wrap-information p {
+  margin-bottom: 0;
+}
+
+.details-movie .wrap-information .info-title {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.details-movie .wrap-information .release {
+  margin-bottom: 10px;
+}
+
+.details-movie .wrap-information .genre ul {
+  padding-left: 0;
+}
+
+.details-movie .wrap-information .genre ul li {
+  display: inline;
 }
 
 footer {
