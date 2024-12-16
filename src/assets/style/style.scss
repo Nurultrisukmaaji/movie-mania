@@ -23,10 +23,10 @@ a {
 
 .landing-page-movie {
     margin-top: 60px;
-    h1 {
-        color: #000;
-        font-weight: bold;
-    }
+    // h1 {
+    //     color: #000;
+    //     font-weight: bold;
+    // }
     .movie-wrap {
         margin-top: 60px;
         .movie-card {
@@ -37,6 +37,7 @@ a {
             border: 1px solid #dbdbdb;
             background-color: #fff;
             .movie-title {
+                color: #000;
                 text-align: center;
                 font-weight: bold;
                 font-size: 18px;
@@ -68,6 +69,11 @@ a {
             }
         }
     }
+}
+
+.head-title {
+    color: #cf0404;
+    font-weight: bold;
 }
 
 footer {

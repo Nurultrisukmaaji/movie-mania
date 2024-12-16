@@ -50,7 +50,7 @@ export default function home(){
     return(
         <div className="landing-page-movie">
             <div className="row text-center justify-content-center">
-                <h1 className="mb-3">Movie Mania</h1>
+                <h1 className="mb-3 head-title">MovieMania</h1>
                 <input type="text" className="form-control w-50" onChange={({target}) => search(target.value)} placeholder="Cari movie..." />
             </div>
 

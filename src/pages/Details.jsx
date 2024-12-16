@@ -6,6 +6,7 @@ import Image from '../assets/images/img.png'
 
 export default function details(){
 
+    const imgUrl = import.meta.env.VITE_API_IMGURL;
     const {name} = useParams(); // Ambil slug dari URL
     const [movie, setMovie] = useState(null); // State untuk detail film
     const [loading, setLoading] = useState(true); // State untuk loading
@@ -24,6 +25,7 @@ export default function details(){
                   // Jika ditemukan, ambil detail berdasarkan ID
                     const movieDetail = await getMovieDetail(matchedMovie.id);
                     setMovie(movieDetail);
+                    console.log(movieDetail);
                 } else {
                     // Jika tidak ditemukan, coba cari menggunakan API pencarian
                     const searchResults = await searchMovie(name.replace(/-/g, ' '));
@@ -48,13 +50,23 @@ export default function details(){
           fetchMovieDetail();
     }, [name]);
 
-    let imageBackground = {
+    let imageBackground = movie?.backdrop_path
+    ? {
+        backgroundImage: `url(${imgUrl}${movie.backdrop_path})`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        width: '100%',
+        height: '500px',
+        borderRadius: '12px'
+    }
+    :{
         backgroundImage: `url(${Image})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
         width: '100%',
-        height: '350px',
+        height: '500px',
         borderRadius: '12px'
     }
 
@@ -63,9 +75,9 @@ export default function details(){
 
     return(
         <div className="details-movie">
+            <h1 className='head-title'>MovieMania</h1>
             <h1 className="title">{movie.title}</h1>
             <p className="date">{movie.release_date}</p>
-            <h1>MovieMania</h1>
             <div className="haeder-detail" style={imageBackground}>
 
             </div>
