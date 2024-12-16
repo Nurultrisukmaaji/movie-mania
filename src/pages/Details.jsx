@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import {Link, useParams} from 'react-router-dom';
 import { getMovieList, getMovieDetail, searchMovie} from '../API/api';
 import {createSlug} from '../components/slug';
+import Image from '../assets/images/img.png'
 
 export default function details(){
 
@@ -47,6 +48,16 @@ export default function details(){
           fetchMovieDetail();
     }, [name]);
 
+    let imageBackground = {
+        backgroundImage: `url(${Image})`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        width: '100%',
+        height: '350px',
+        borderRadius: '12px'
+    }
+
     if (loading) return <p>Loading...</p>;
     if (!movie) return <p>Movie not found bro...</p>;
 
@@ -54,7 +65,10 @@ export default function details(){
         <div className="details-movie">
             <h1 className="title">{movie.title}</h1>
             <p className="date">{movie.release_date}</p>
-            <div className='image-detail-movie'></div>
+            <h1>MovieMania</h1>
+            <div className="haeder-detail" style={imageBackground}>
+
+            </div>
         </div>
     )
 }
