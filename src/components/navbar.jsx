@@ -6,7 +6,7 @@ export default function navbar() {
   return (
     <nav className='navbar navbar-expand-lg  bg-dark'>
         <div className="container">
-            <Link className="navbar-brand" to="/">Movie</Link>
+            <Link className="navbar-brand" to="/">MovieMania</Link>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span className="navbar-toggler-icon"><i className="bi bi-list"></i></span>
             </button>

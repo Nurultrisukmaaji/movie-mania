@@ -50,6 +50,7 @@ export default function details(){
           fetchMovieDetail();
     }, [name]);
 
+    // background image details
     let imageBackground = movie?.backdrop_path
     ? {
         backgroundImage: `url(${imgUrl}${movie.backdrop_path})`,
@@ -76,10 +77,11 @@ export default function details(){
     return(
         <div className="details-movie">
             <h1 className='head-title'>MovieMania</h1>
-            <h1 className="title">{movie.title}</h1>
-            <p className="date">{movie.release_date}</p>
-            <div className="haeder-detail" style={imageBackground}>
-
+            <div className="header-detail d-flex flex-column" style={imageBackground}>
+                <div className="wrap-title mt-auto">
+                    <h1 className="title">{movie.title}</h1>
+                    <p className="tagline">{movie.tagline}</p>
+                </div>
             </div>
         </div>
     )
