@@ -76,26 +76,53 @@ export default function details(){
                 <div className="col-sm-12 col-md-10">
                     <div className="wrap-information">
                         <h2 className="info-title">{movie.title}</h2>
-                        <p className='release'><b>Release:</b> <br /> {movie.release_date}</p>
-                        <div className="genre">
-                            <p><b>Genre:</b></p>
-                            <ul>
-                                {movie.genres.map((genre, index) => (
-                                    <li key={genre.id}>
-                                        {genre.name}
-                                        {index < movie.genres.length - 1 && ', '} 
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                        <div className="sinopsis"><b>Sinopsis</b><br /> {movie.overview}</div>
+                        <p className='release more-detail-info'><b>Release</b> <br /> {movie.release_date}</p>
+                        <div className="sinopsis more-detail-info"><b>Sinopsis</b><br /> {movie.overview}</div>
                     </div>
                 </div>
                 <div className="col-sm-12 col-md-10 mt-4">
                     <h2 className='title-more'>More Details</h2>
                     <div className="row">
                         <div className="col-sm-12 col-md-4">
-                            <div className="wrap-information wrap-more-detail"></div>
+                            <div className="wrap-information wrap-more-detail">
+                                <div className="genre">
+                                    <p><b>Genre</b></p>
+                                    <ul>
+                                        {movie.genres.map((genre, index) => (
+                                            <li key={genre.id}>
+                                                {genre.name}
+                                                {index < movie.genres.length - 1 && ', '} 
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                                <div className="production">
+                                    <p><b>Production</b></p>
+                                    <ul>
+                                        {movie.production_companies.map((production, index) => (
+                                            <li key={production.id}>
+                                                {production.name}
+                                                {index < movie.production_companies.length - 1 && ', '}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-sm-12 col-md-4">
+                            <div className="wrap-information wrap-more-detail">
+                               <div className="more-detail-info audio">
+                                    <p><b>Audio</b><br /> {movie.original_language} </p>
+                               </div>
+                               <div className="more-detail-info status">
+                                    <p><b>Status</b> <br /> {movie.status}</p>
+                               </div>
+                            </div>
+                        </div>
+                        <div className="col-sm-12 col-md-4">
+                            <div className="wrap-information wrap-more-detail">
+                                
+                            </div>
                         </div>
                     </div>
                 </div>

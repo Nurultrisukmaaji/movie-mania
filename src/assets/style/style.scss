@@ -110,10 +110,11 @@ a {
             font-weight: bold;
             font-size: 22px;
         }
-        .release {
+        .more-detail-info {
             margin-bottom: 10px;
         }
-        .genre {
+        .genre,
+        .production {
             ul {
                 padding-left: 0;
                 li {
@@ -124,6 +125,7 @@ a {
     }
     .wrap-more-detail {
         margin-top: 0px;
+        min-height: 250px;
     }
     .title-more {
         font-weight: bold;

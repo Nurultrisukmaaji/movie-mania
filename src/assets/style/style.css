@@ -120,20 +120,23 @@ a {
   font-size: 22px;
 }
 
-.details-movie .wrap-information .release {
+.details-movie .wrap-information .more-detail-info {
   margin-bottom: 10px;
 }
 
-.details-movie .wrap-information .genre ul {
+.details-movie .wrap-information .genre ul,
+.details-movie .wrap-information .production ul {
   padding-left: 0;
 }
 
-.details-movie .wrap-information .genre ul li {
+.details-movie .wrap-information .genre ul li,
+.details-movie .wrap-information .production ul li {
   display: inline;
 }
 
 .details-movie .wrap-more-detail {
   margin-top: 0px;
+  min-height: 250px;
 }
 
 .details-movie .title-more {
