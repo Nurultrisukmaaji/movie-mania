@@ -1,0 +1,47 @@
+@media (max-width: 1198px) {
+  .landing-page-movie .movie-wrap .movie-card {
+    height: 410px;
+  }
+  .landing-page-movie .movie-wrap .movie-card .movie-title {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 991px) {
+  .landing-page-movie .movie-wrap .movie-card {
+    height: 400px;
+  }
+  .landing-page-movie .movie-wrap .movie-card .movie-title {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 767px) {
+  .landing-page-movie .movie-wrap .movie-card {
+    height: 410px;
+  }
+  .landing-page-movie .movie-wrap .movie-card .movie-img {
+    height: 320px;
+  }
+}
+
+@media (max-width: 575px) {
+  .landing-page-movie {
+    margin-top: 40px;
+  }
+  .landing-page-movie .movie-wrap .movie-card {
+    height: 320px;
+    padding: 10px;
+  }
+  .landing-page-movie .movie-wrap .movie-card .movie-img {
+    height: 320px;
+  }
+  .landing-page-movie .movie-wrap .movie-card .movie-title {
+    font-size: 12px;
+  }
+  .landing-page-movie .movie-wrap .movie-card .movie-date,
+  .landing-page-movie .movie-wrap .movie-card .movie-rating {
+    font-size: 12px;
+  }
+}
+/*# sourceMappingURL=style_responsive.css.map */
