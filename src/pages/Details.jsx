@@ -121,7 +121,9 @@ export default function details(){
                         </div>
                         <div className="col-sm-12 col-md-4">
                             <div className="wrap-information wrap-more-detail">
-                                
+                                <div className="more-detail-info vote">
+                                    <p><b>Rating</b><br /> {movie.vote_average} </p>
+                               </div>
                             </div>
                         </div>
                     </div>
