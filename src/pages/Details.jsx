@@ -91,6 +91,14 @@ export default function details(){
                         <div className="sinopsis"><b>Sinopsis</b><br /> {movie.overview}</div>
                     </div>
                 </div>
+                <div className="col-sm-12 col-md-10 mt-4">
+                    <h2 className='title-more'>More Details</h2>
+                    <div className="row">
+                        <div className="col-sm-12 col-md-4">
+                            <div className="wrap-information wrap-more-detail"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     )
