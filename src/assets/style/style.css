@@ -138,6 +138,7 @@ a {
 .details-movie .wrap-more-detail {
   margin-top: 0px;
   min-height: 250px;
+  margin-bottom: 10px;
 }
 
 .details-movie .title-more {

@@ -25,7 +25,7 @@ export default function details(){
                   // Jika ditemukan, ambil detail berdasarkan ID
                     const movieDetail = await getMovieDetail(matchedMovie.id);
                     setMovie(movieDetail);
-                    console.log(movieDetail);
+                    // console.log(movieDetail);
                 } else {
                     // Jika tidak ditemukan, coba cari menggunakan API pencarian
                     const searchResults = await searchMovie(name.replace(/-/g, ' '));
