@@ -12,12 +12,14 @@ export default function App() {
     <>
       <Router>
         <Navbar />
-        <div className="container">
-          <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/movie/:name" element={<MovieDetail />} />
-          </Routes>
-        </div>
+        <main>
+          <div className="container">
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/movie/:name" element={<MovieDetail />} />
+            </Routes>
+          </div>
+        </main>
         <Footer />
       </Router>
      
